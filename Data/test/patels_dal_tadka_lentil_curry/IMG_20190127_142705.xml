@@ -1,0 +1,26 @@
+<annotation>
+	<folder>patels_dal_tadka_lentil_curry</folder>
+	<filename>IMG_20190127_142705.jpg</filename>
+	<path>/Users/brendankolisnik/pythonprojects/GC_computer_vision/GC_computer_vision/Data/test/patels_dal_tadka_lentil_curry/IMG_20190127_142705.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>patels_dal_tadka_lentil_curry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>240</xmin>
+			<ymin>141</ymin>
+			<xmax>1430</xmax>
+			<ymax>1354</ymax>
+		</bndbox>
+	</object>
+</annotation>
