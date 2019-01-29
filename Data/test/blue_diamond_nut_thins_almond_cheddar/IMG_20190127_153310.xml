@@ -1,0 +1,26 @@
+<annotation>
+	<folder>blue_diamond_nut_thins_almond_cheddar</folder>
+	<filename>IMG_20190127_153310.jpg</filename>
+	<path>/Users/deenchoudhury/QMIND/GC_computer_vision/Data/test/blue_diamond_nut_thins_almond_cheddar/IMG_20190127_153310.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>blue_diamond_nut_thins_almond_cheddar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>404</xmin>
+			<ymin>162</ymin>
+			<xmax>1674</xmax>
+			<ymax>1153</ymax>
+		</bndbox>
+	</object>
+</annotation>
