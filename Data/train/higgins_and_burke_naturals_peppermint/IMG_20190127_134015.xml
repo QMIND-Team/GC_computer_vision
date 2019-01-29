@@ -1,0 +1,26 @@
+<annotation>
+	<folder>higgins_and_burke_naturals_peppermint</folder>
+	<filename>IMG_20190127_134015.jpg</filename>
+	<path>/Users/stefanoroque/Desktop/GC/GC_computer_vision/Data/train/higgins_and_burke_naturals_peppermint/IMG_20190127_134015.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>higgins_and_burke_naturals_peppermint</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>486</xmin>
+			<ymin>358</ymin>
+			<xmax>1559</xmax>
+			<ymax>1285</ymax>
+		</bndbox>
+	</object>
+</annotation>
