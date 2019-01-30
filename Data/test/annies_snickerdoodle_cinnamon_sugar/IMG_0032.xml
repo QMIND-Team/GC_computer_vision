@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annies_snickerdoodle_cinnamon_sugar</folder>
+	<filename>IMG_0032.jpg</filename>
+	<path>/Users/jbeallor/Documents/QMIND/GC_computerVision/GC_computer_vision/Data/test/annies_snickerdoodle_cinnamon_sugar/IMG_0032.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2048</width>
+		<height>2048</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>annies_snickerdoodle_cinnamon_sugar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>652</xmin>
+			<ymin>9</ymin>
+			<xmax>1185</xmax>
+			<ymax>2044</ymax>
+		</bndbox>
+	</object>
+</annotation>
