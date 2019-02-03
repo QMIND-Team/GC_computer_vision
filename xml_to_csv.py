@@ -27,13 +27,13 @@ def xml_to_csv(path):
 
 def main():
     #loop for training images
-    for item in ['annies_snickerdoodle_cinnamon_sugar', 'blue_diamond_nut_thins_almond_cheddar', 'blue_diamond_nut_thins_almond_seasalt','higgins_and_burke_naturals_peppermint','hot_kid_rice_crisps_sesame','patels_dal_tadka_lentil_curry']
+    for item in ['annies_snickerdoodle_cinnamon_sugar', 'blue_diamond_nut_thins_almond_cheddar', 'blue_diamond_nut_thins_almond_seasalt','higgins_and_burke_naturals_peppermint','hot_kid_rice_crisps_sesame','patels_dal_tadka_lentil_curry']:
         image_path = os.path.join(os.getcwd(), 'Data/train/{}'.format(item))
         xml_df = xml_to_csv(image_path)
         xml_df.to_csv('Data/train/{}_labels.csv'.format(item), index=None)
         print('Successfully converted xml to csv.')
     #loop for testing images
-    for item in ['annies_snickerdoodle_cinnamon_sugar', 'blue_diamond_nut_thins_almond_cheddar', 'blue_diamond_nut_thins_almond_seasalt','higgins_and_burke_naturals_peppermint','hot_kid_rice_crisps_sesame','patels_dal_tadka_lentil_curry']
+    for item in ['annies_snickerdoodle_cinnamon_sugar', 'blue_diamond_nut_thins_almond_cheddar', 'blue_diamond_nut_thins_almond_seasalt','higgins_and_burke_naturals_peppermint','hot_kid_rice_crisps_sesame','patels_dal_tadka_lentil_curry']:
         image_path = os.path.join(os.getcwd(), 'Data/test/{}'.format(item))
         xml_df = xml_to_csv(image_path)
         xml_df.to_csv('Data/test/{}_labels.csv'.format(item), index=None)
