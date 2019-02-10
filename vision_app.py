@@ -67,7 +67,7 @@ from matplotlib import pyplot as plt
 from PIL import Image
 
 import cv2
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # This is needed since the notebook is stored in the object_detection folder.
 sys.path.append("..")
@@ -102,7 +102,7 @@ DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
+PATH_TO_LABELS = os.path.join('object_detection/data', 'mscoco_label_map.pbtxt')
 
 NUM_CLASSES = 90
 
