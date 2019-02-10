@@ -5,4 +5,10 @@ create one with virutalenv venv
 activate it with . venv/bin/activate
 deactivate it with deactivate
 when you want tp update the requirements.txt for everyone use pip freeze > requirements.txt (must be in the project directory)
- 
+
+
+to chnge matplotlib backend 
+cd ~/.matplotlib
+touch maplotlibrc
+emacs matplotlibrc
+backend: TkAgg 
