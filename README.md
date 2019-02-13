@@ -3,7 +3,7 @@
 Main repo for the Grocery Checkout Team's computer vision project
 
 
-##    SETUP    ##
+##    Setup    ##
 
 The data in this file is used in combination with the TF models file found here:
 https://github.com/tensorflow/models
