@@ -1,0 +1,26 @@
+<annotation>
+	<folder>blue_diamond_nut_thins_almond_seasalt</folder>
+	<filename>IMG_20190302_110519.jpg</filename>
+	<path>/Users/jbeallor/Documents/QMIND/GC_computerVision/GC_computer_vision/Data/test/blue_diamond_nut_thins_almond_seasalt/IMG_20190302_110519.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>blue_diamond_nut_thins_almond_seasalt</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>395</xmin>
+			<ymin>496</ymin>
+			<xmax>1589</xmax>
+			<ymax>905</ymax>
+		</bndbox>
+	</object>
+</annotation>
