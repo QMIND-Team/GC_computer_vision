@@ -1,0 +1,26 @@
+<annotation>
+	<folder>patels_dal_tadka_lentil_curry</folder>
+	<filename>IMG_7344.JPG</filename>
+	<path>/Users/jbeallor/Documents/QMIND/GC_computerVision/GC_computer_vision/Data/test/patels_dal_tadka_lentil_curry/IMG_7344.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>patels_dal_tadka_lentil_curry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>539</xmin>
+			<ymin>1085</ymin>
+			<xmax>2317</xmax>
+			<ymax>2122</ymax>
+		</bndbox>
+	</object>
+</annotation>
