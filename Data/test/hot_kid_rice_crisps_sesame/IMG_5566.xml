@@ -1,0 +1,26 @@
+<annotation>
+	<folder>hot_kid_rice_crisps_sesame</folder>
+	<filename>IMG_5566.JPG</filename>
+	<path>/Users/brendankolisnik/pythonprojects/GC_computer_vision/GC_computer_vision/Data/test/hot_kid_rice_crisps_sesame/IMG_5566.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hot_kid_rice_crisps_sesame</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1214</xmin>
+			<ymin>348</ymin>
+			<xmax>2198</xmax>
+			<ymax>2843</ymax>
+		</bndbox>
+	</object>
+</annotation>
