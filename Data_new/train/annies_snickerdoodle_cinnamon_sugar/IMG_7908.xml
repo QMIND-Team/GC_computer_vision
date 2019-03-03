@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annies_snickerdoodle_cinnamon_sugar</folder>
+	<filename>IMG_7908.JPG</filename>
+	<path>C:\Users\JackD\Desktop\QMIND2019\GC_computer_vision\Data_new\train\annies_snickerdoodle_cinnamon_sugar\IMG_7908.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>annies_snickerdoodle_cinnamon_sugar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>776</xmin>
+			<ymin>556</ymin>
+			<xmax>2108</xmax>
+			<ymax>2348</ymax>
+		</bndbox>
+	</object>
+</annotation>

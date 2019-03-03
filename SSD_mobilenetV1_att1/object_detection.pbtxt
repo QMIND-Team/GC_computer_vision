@@ -1,0 +1,25 @@
+item {
+id: 1
+name: 'annies_snickerdoodle_cinnamon_sugar'
+}
+item {
+id: 2
+name: 'higgins_and_burke_naturals_peppermint'
+}
+item {
+id: 3
+name: 'hot_kid_rice_crisps_sesame'
+}
+item {
+id: 4
+name: 'patels_dal_tadka_lentil_curry'
+}
+item {
+id: 5
+name: 'blue_diamond_nut_thins_almond_seasalt'
+}
+
+item {
+id: 6
+name: 'blue_diamond_nut_thins_almond_cheddar'
+}
