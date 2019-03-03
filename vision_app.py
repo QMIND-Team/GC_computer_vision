@@ -41,8 +41,7 @@ from utils import visualization_utils as vis_util
 # In[4]:
 
 # What model to download.
-MODEL_NAME = 'NAME OF MODEL'
-
+MODEL_NAME = "GC_resnet1"
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
