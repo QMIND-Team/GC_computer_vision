@@ -1,0 +1,26 @@
+<annotation>
+	<folder>higgins_and_burke_naturals_peppermint</folder>
+	<filename>IMG_7665.JPG</filename>
+	<path>/Users/deenchoudhury/QMIND/GC_computer_vision/Data_new/test/higgins_and_burke_naturals_peppermint/IMG_7665.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>higgins_and_burke_naturals_peppermint</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1199</xmin>
+			<ymin>1349</ymin>
+			<xmax>1974</xmax>
+			<ymax>2533</ymax>
+		</bndbox>
+	</object>
+</annotation>
