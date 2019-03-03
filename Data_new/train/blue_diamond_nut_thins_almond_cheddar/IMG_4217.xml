@@ -1,0 +1,26 @@
+<annotation>
+	<folder>blue_diamond_nut_thins_almond_cheddar</folder>
+	<filename>IMG_4217.JPG</filename>
+	<path>/Users/jbeallor/Documents/QMIND/GC_computerVision/GC_computer_vision/Data_new/train/blue_diamond_nut_thins_almond_cheddar/IMG_4217.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3264</width>
+		<height>2448</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>blue_diamond_nut_thins_almond_cheddar</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1370</xmin>
+			<ymin>742</ymin>
+			<xmax>2015</xmax>
+			<ymax>1786</ymax>
+		</bndbox>
+	</object>
+</annotation>
