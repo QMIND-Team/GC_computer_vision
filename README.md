@@ -29,8 +29,14 @@ emacs matplotlibrc
 backend: TkAgg 
 
 ## Setup ##
-Consider using a virtual environment for this project.
-
+Consider using a virtual environment for this project using:
+``` 
+virutalenv venv
+```
+Activate your venv using:
+```
+. venv/bin/activate
+```
 1. Install tensorflow
 ```
 # For CPU
