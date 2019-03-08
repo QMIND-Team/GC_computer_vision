@@ -43,7 +43,7 @@ class DetectorAPI:
             feed_dict={self.image_tensor: image_np_expanded})
         end_time = time.time()
 
-        print("Elapsed Time:", end_time - start_time)
+        # print("Elapsed Time:", end_time - start_time)
 
         im_height, im_width, _ = image.shape
         boxes_list = [None for i in range(boxes.shape[1])]
@@ -71,17 +71,31 @@ class Thread(QThread):
         label_prev = np.zeros(90)
 
         cap = cv2.VideoCapture(0)
+        labels = np.zeros(90)
+
+        appleTimer = None
+        bananaTimer = None
+        orangeTimer =  None
+        waitTime = 5;
+
         while True:
             ret, frame = cap.read()
             boxes, scores, classes, num = odapi.processFrame(frame)
-            labels = np.zeros(90)
+            # labels = np.zeros(90)
             for i in range(len(boxes)):
                 for label in range(len(labels)):
                     if classes[i] == label and scores[i] > threshold and (classes[i] in [52,53,55]):
                         box = boxes[i]
                         cv2.rectangle(frame, (box[1], box[0]), (box[3], box[2]), (255, 0, 0), 2)
-                        labels[label] += 1
-                        print(label)
+                        if classes[i] == 52 and (appleTimer == None or time.time()-appleTimer > waitTime):
+                            appleTimer = time.time()
+                            labels[label] += 1
+                        if classes[i] == 53 and (bananaTimer == None or time.time()-bananaTimer > waitTime):
+                            bananaTimer = time.time()
+                            labels[label] += 1
+                        if classes[i] == 55 and (orangeTimer == None or time.time()-orangeTimer > waitTime):
+                            orangeTimer = time.time()
+                            labels[label] += 1                          
             # print(labels)
 
             old_labels = labels
@@ -111,7 +125,7 @@ class Example(QWidget):
 
     @pyqtSlot(object)
     def getClasses(self, value):
-        print("List: {}".format(value))
+        # print("List: {}".format(value))
         PString=""
         NumString=""
         CostString=""
