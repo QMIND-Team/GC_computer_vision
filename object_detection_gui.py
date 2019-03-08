@@ -10,6 +10,7 @@ from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, Qt
 
 class Thread(QThread):
     changePixmap = pyqtSignal(QImage)
+    getValues = pyqtSignal(object)
 
     def run(self):
         cap = cv2.VideoCapture(0)
@@ -20,6 +21,7 @@ class Thread(QThread):
                 convertToQtFormat = QImage(rgbImage.data, rgbImage.shape[1], rgbImage.shape[0], QImage.Format_RGB888)
                 p = convertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
                 self.changePixmap.emit(p)
+                self.getValues.emit([0,0,0,0,0])
 
 
 
@@ -33,7 +35,11 @@ class Example(QWidget):
         
     @pyqtSlot(QImage)
     def setImage(self, image):
-    	self.label.setPixmap(QPixmap.fromImage(image))
+        self.label.setPixmap(QPixmap.fromImage(image))
+
+    @pyqtSlot(object)
+    def getClasses(self, value):
+    	 print("List: {}".format(value))
         
     def initUI(self):
         '''
@@ -135,15 +141,33 @@ class Example(QWidget):
         self.setWindowTitle('Grocery Checkout')    
         self.show()
         '''
+
+        self.item = QLabel('Item')
+        self.num = QLabel('Number')
+        self.cost = QLabel('Unit Cost')
+        self.tcost = QLabel('Total Cost')
+
+        hori = QHBoxLayout()
+        grid = QGridLayout()
+        grid.setSpacing(10)
+
+        grid.addWidget(self.item, 0, 0)
+        grid.addWidget(self.num, 0, 1)
+        grid.addWidget(self.cost, 0, 3)
+        grid.addWidget(self.tcost, 0, 5)
+        hori.addLayout(grid)
+        self.setLayout(hori)
         self.setWindowTitle(self.title)
         self.setGeometry(300, 300, 600, 400)
         
         self.label = QLabel(self)
         self.label.move(280, 120)
         self.label.resize(640, 480)
+
         self.show()
         th = Thread(self)
         th.changePixmap.connect(self.setImage)
+        th.getValues.connect(self.getClasses)
         th.start()
 
 
