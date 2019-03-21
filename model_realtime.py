@@ -12,17 +12,32 @@ class DetectorAPI:
     def __init__(self, path_to_ckpt):
         self.path_to_ckpt = path_to_ckpt
 
+
+        # initialize a graph
         self.detection_graph = tf.Graph()
+        # sets to default graph
         with self.detection_graph.as_default():
+            # https://github.com/tensorflow/tensorflow/blob/r1.12/tensorflow/core/framework/graph.proto
             od_graph_def = tf.GraphDef()
+            # some sort of file wrapping of current model
             with tf.gfile.GFile(self.path_to_ckpt, 'rb') as fid:
+                # get file content as a string
                 serialized_graph = fid.read()
+                # parse the string
                 od_graph_def.ParseFromString(serialized_graph)
+                # imports the specified graph into the default graph
                 tf.import_graph_def(od_graph_def, name='')
 
+
+        # NOTE: At this point the graph has been loaded from checkpoint that was specified
+
+
+        # returns a context manager to default_graph, not sure what that means
         self.default_graph = self.detection_graph.as_default()
+        # create a session with the detection_graph
         self.sess = tf.Session(graph=self.detection_graph)
 
+        # this specifies all of the operations that are being seeked
         # Definite input and output Tensors for detection_graph
         self.image_tensor = self.detection_graph.get_tensor_by_name('image_tensor:0')
         # Each box represents a part of the image where a particular object was detected.
@@ -33,14 +48,21 @@ class DetectorAPI:
         self.detection_classes = self.detection_graph.get_tensor_by_name('detection_classes:0')
         self.num_detections = self.detection_graph.get_tensor_by_name('num_detections:0')
 
+        # NOTE: All of these operation should theoretically return some type of tensor
+
     def processFrame(self, image):
         # Expand dimensions since the trained_model expects images to have shape: [1, None, None, 3]
         image_np_expanded = np.expand_dims(image, axis=0)
         # Actual detection.
         start_time = time.time()
+
+        # The session is run, printing this, the session would return the tensors collected by the image_tensor:0
+        # operation and others, since they are run in a list the output is a list which is then passed to the tuple
         (boxes, scores, classes, num) = self.sess.run(
             [self.detection_boxes, self.detection_scores, self.detection_classes, self.num_detections],
             feed_dict={self.image_tensor: image_np_expanded})
+
+
         end_time = time.time()
 
         print("Elapsed Time:", end_time - start_time)
@@ -55,7 +77,9 @@ class DetectorAPI:
 
         return boxes_list, scores[0].tolist(), [int(x) for x in classes[0].tolist()], int(num[0])
 
+
     def close(self):
+        # closes the session
         self.sess.close()
         self.default_graph.close()
 
